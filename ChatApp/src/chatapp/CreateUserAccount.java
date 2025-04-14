@@ -31,7 +31,7 @@ public class CreateUserAccount
       }
       if (!isValidPhoneNumber(phoneNumber))
       {
-          throw new IllegalArgumentException("Invalid phone number. It must include the country code and a number no more than 10 digits long. ");
+          throw new IllegalArgumentException("Invalid phone number. It must include South African international country code (+27) followed by 9 digits. ");
       }
       
       this.username = username;
