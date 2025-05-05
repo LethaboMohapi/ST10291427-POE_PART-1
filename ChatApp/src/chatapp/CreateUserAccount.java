@@ -20,20 +20,7 @@ public class CreateUserAccount
    private String username, password, phoneNumber;
    
    public CreateUserAccount(String username, String password, String phoneNumber)
-    {
-      if (!isValidUsername(username))
-      {
-          throw new IllegalArgumentException("Invalid username. It must contain an underscore and be no more than five characters long. ");
-      }
-      if (!isValidPassword(password))
-      {
-          throw new IllegalArgumentException("Invalid password. It must be  at least eight characters long, must contain at least one capital letter, one number and one special character. ");
-      }
-      if (!isValidPhoneNumber(phoneNumber))
-      {
-          throw new IllegalArgumentException("Invalid phone number. It must include South African international country code (+27) followed by 9 digits. ");
-      }
-      
+    {      
       this.username = username;
       this.password = password;
       this.phoneNumber = phoneNumber;
@@ -73,9 +60,4 @@ public class CreateUserAccount
        return phoneNumber != null && phoneNumber.matches(regex);
    }
    
-   @Override
-   public String toString()
-   {
-       return "UserAccount{" + "username='" + username + '\'' + ", phoneNumber='" + phoneNumber + '\'' + '}';
-   }
 }
